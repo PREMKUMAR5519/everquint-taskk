@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="waterTank.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Task 2</h1>
+        <label for="heightsInput">Input Heights (e.g., 0,4,0,0,0,6,0,6,4,0):</label>
+        <input type="text" id="input_value" value="0,4,0,0,0,6,0,6,4,0">
+        <button onclick="solveAndRender()">Enter</button>
+        <div id="resultOutput"></div>
+
+        <svg id="waterTankSVG" width="800" height="400" viewBox="0 0 800 400"></svg>
+    </div>
+    <script src="waterTank.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+@use '../../styles/variables' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f3f4f6;
+  color: $text;
+  border: 1px solid $border;
+  position: absolute;
+  right: 16px;
+  top: 15px;
+}
+
+.badge--info {
+  background: #e5e7eb63;
+  border-color: $border;
+  color: $text-soft;
+}
+
+.badge--danger {
+  background: #fef2f2;
+  border-color: rgba($danger, 0.4);
+  color: $danger;
+}
+
+.badge--success {
+  background: #f3f4f6;
+  border-color: $border;
+  color: $text;
+}
+
+.badge--neutral {
+  background: #f3f4f6;
+  border-color: $border;
+}

@@ -1,0 +1,77 @@
+@use '../../styles/variables' as *;
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-card__title {
+  margin: 0 0 4px 0;
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.25px;
+  color: rgb(46, 46, 46);
+}
+
+.task-card__assignee {
+  margin: 0;
+  color: $muted;
+  font-size: 13px;
+}
+
+.task-card__desc {
+  margin: 0;
+  color: $text-soft;
+  line-height: 1.5;
+}
+
+.task-card__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: $spacing-3;
+  align-items: center;
+}
+
+.task-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.task-card__footer {
+  display: flex;
+  justify-content: end;
+  gap: $spacing-3;
+  align-items: center;
+}
+
+.task-card__edit {
+  background-color: transparent;
+  color: $text;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.1s ease;
+}
+
+.task-card__edit:hover {
+  border-color: $primary;
+  transform: translateY(-1px);
+}
+
+.muted {
+  color: $muted;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+
+  .task-card__meta,
+  .task-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

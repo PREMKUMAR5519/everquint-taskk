@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 35px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s ease, border-color 0.2s ease;
+  background: $primary;
+  color: #f8fafc;
+  box-shadow: none;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.button--secondary {
+  background: #ffffff;
+  border-color: $border;
+  color: $text;
+  box-shadow: none;
+}
+
+.button--destructive {
+  background: $danger;
+  border-color: rgba($danger, 0.35);
+}
+
+.button--sm {
+  padding: 0.45rem 0.75rem;
+  border-radius: $radius-sm;
+}
+
+.button--lg {
+  padding: 0.9rem 1.2rem;
+  border-radius: $radius-lg;
+}

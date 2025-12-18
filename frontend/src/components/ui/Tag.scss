@@ -1,0 +1,12 @@
+@use '../../styles/variables' as *;
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 15px 6px 15px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgb(248, 248, 248);
+  color: $text;
+  border: 1px solid $border;
+}

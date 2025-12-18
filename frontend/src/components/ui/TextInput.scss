@@ -1,0 +1,47 @@
+@use '../../styles/variables' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field__label {
+  font-size: 13px;
+  color: $text-soft;
+}
+
+.field__control {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: $radius-sm;
+  border: 1px solid rgba(71, 71, 71, 0.116);
+  background: #00000000;
+  color: $text;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field__control:focus {
+  outline: none;
+  border-color: $primary;
+  box-shadow: 0 0 0 3px rgba($primary, 0.12);
+}
+
+.field__control--error {
+  border-color: $danger;
+}
+
+.field__control--textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.field__helper {
+  font-size: 12px;
+  color: $muted;
+}
+
+.field__error {
+  font-size: 12px;
+  color: $danger;
+}

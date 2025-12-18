@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+}
+
+.task-form__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: $spacing-3;
+}
+
+.task-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-3;
+}
+
+@media (max-width: 640px) {
+  .task-form__actions {
+    flex-direction: column;
+  }
+}

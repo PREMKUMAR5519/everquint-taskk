@@ -1,0 +1,119 @@
+@use '../../styles/variables' as *;
+
+.select {
+  position: relative;
+}
+
+.select__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: $radius-sm;
+  border: 1px solid $border;
+  background: #ffffff56;
+  color: $text;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+
+}
+
+.select__button:hover {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.select__button:focus-visible {
+  outline: none;
+  border-color: $primary;
+  box-shadow: 0 0 0 3px rgba($primary, 0.14);
+}
+
+.select__caret {
+  font-size: 12px;
+  color: $muted;
+}
+
+.select__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 8px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.034);
+  padding: $spacing-1;
+  animation: dropdown-fade 120ms ease-out;
+  transform-origin: top;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.select__header {
+  font-weight: 700;
+  font-size: 14px;
+  color: $text-soft;
+}
+
+
+.select__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-1;
+  position: relative;
+
+  .value {
+    padding-left: 25px;
+  }
+}
+
+.select__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: none;
+  background: transparent;
+  align-items: center;
+  padding: 7px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: $text;
+  transition: background-color 0.15s ease;
+  opacity: 0.8;
+
+  &.selected {
+    font-weight: 500;
+    opacity: 1;
+
+  }
+}
+
+.select__item:hover {
+  background: #0f0f0f15;
+}
+
+.select__check {
+  color: $primary;
+  font-weight: 700;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transform: translateY(1.5px);
+}
+
+@keyframes dropdown-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

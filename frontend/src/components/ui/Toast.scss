@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.toast {
+  position: fixed;
+  bottom: $spacing-5;
+  right: $spacing-5;
+  padding: $spacing-3 $spacing-4;
+  border-radius: $radius-md;
+  background: #ffffff;
+  border: 1px solid $border;
+  box-shadow: $shadow-soft;
+  color: $text;
+  z-index: 30;
+  min-width: 260px;
+}
+
+.toast--info {
+  border-color: $border;
+}
+
+.toast--success {
+  border-color: $border;
+}
+
+.toast--danger {
+  border-color: rgba($danger, 0.4);
+}

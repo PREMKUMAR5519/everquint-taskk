@@ -1,0 +1,19 @@
+@use '../../styles/variables' as *;
+
+.card {
+  // background: linear-gradient(45deg, #fffcf5ab 0%, #eaf5ff67 100%);
+  background-color: rgba(255, 255, 255, 0.527);
+  border: 1px solid rgba(128, 128, 128, 0.158);
+  border-radius: $radius-lg;
+  padding: 15px 15px 10px 15px;
+  box-shadow: none;
+  width: 400px;
+  position: relative;
+}
+
+.card-end {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
