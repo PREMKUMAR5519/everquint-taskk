@@ -20,7 +20,7 @@ npm install
 I didnt add .env in git ignore if you want Create  `.env` 
 ```
 PORT=4000
-MONGO_URI=mongodb://localhost:27017/meeting_rooms
+MONGO_URI = mongodb+srv://premkumar:6382688488@cluster0.zyvkvvx.mongodb.net/?appName=Cluster0
 ```
 
 ## Run
