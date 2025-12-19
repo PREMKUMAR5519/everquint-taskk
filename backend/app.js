@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
   <title>${escapeHtml(title)}</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 40px; color: #1a1a1a; line-height: 1.6; }
-    .card { max-width: 840px; margin: 0 auto; padding: 32px; border: 1px solid #e5e7eb; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); background: #fff; }
+    .card { max-width: 840px; margin: 0 auto; padding: 32px;  border-radius: 12px;  background: #fff; }
     h1 { margin-top: 0; font-size: 28px; }
     pre { white-space: pre-wrap; background: #0b1021; color: #e8edf7; padding: 20px; border-radius: 10px; overflow: auto; font-size: 14px; }
     .muted { color: #6b7280; font-size: 14px; }
@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
 <body>
   <div class="card">
     <h1>${escapeHtml(title)}</h1>
-    <div class="muted">API information sourced from README.md</div>
+    <div class="muted">API information</div>
     <pre>${escapeHtml(readme)}</pre>
   </div>
 </body>
