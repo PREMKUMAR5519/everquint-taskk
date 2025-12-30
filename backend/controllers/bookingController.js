@@ -7,7 +7,7 @@ const { ValidationError, NotFoundError, ConflictError } = require("../utils/erro
 const crypto = require("crypto");
 
 function hashRequest(body) {
-    return crypto.createHash("Prem2002").update(JSON.stringify(body)).digest("hex");
+    return crypto.createHash("sha512").update(JSON.stringify(body)).digest("hex");
 }
 
 exports.createBooking = async (req, res, next) => {
@@ -107,3 +107,4 @@ exports.cancelBooking = async (req, res, next) => {
         res.json(booking);
     } catch (e) { next(e); }
 };
+
